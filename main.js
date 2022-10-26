@@ -14,10 +14,25 @@ let btn=document.querySelector('#btn')
 let body=document.querySelector('body')
 let colorname = document.querySelector('#colorname')
 
+
+const obtengoNumero = () => {
+    
+    return Math.floor(Math.random() * hex.length)
+}
+
+
 const cambiaColor = () => {
-    body.style.backgroundColor='#FCBACB'        
-    colorname.innerHTML = "#FCBACB"
+    let hexcolor= '#'
+    for (let i=0 ; i < 6 ; i++){
+    hexcolor=hexcolor+hex[obtengoNumero()]
+    console.log(hexcolor)
+    }
+
+    body.style.backgroundColor = hexcolor        
+    colorname.innerHTML = hexcolor
 }
 
 btn.addEventListener('click',cambiaColor)
+
+//let resultado = Math.random() * 100 Me muestra nun random del 1 al 100
 
