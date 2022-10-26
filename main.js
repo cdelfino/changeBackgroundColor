@@ -15,4 +15,5 @@ let body=document.querySelector('body')
 
 const cambiaColor = () => {
     body.style.backgroundColor='#FCBACB'
+    
 }
